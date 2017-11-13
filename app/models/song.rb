@@ -4,11 +4,12 @@ class Song < ActiveRecord::Base
 
   def get_genre_name
     instance = Genre.select(:name).where(id: 1)
-    instance.name
+    instance[0].name
     #binding.pry
   end
 
   def drake_made_this
     # when this method is called it should assign the song's artist to Drake
+    
   end
 end
