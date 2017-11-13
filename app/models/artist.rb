@@ -7,7 +7,6 @@ class Artist < ActiveRecord::Base
     #return the genre of the artist's first saved song
     binding.pry
     Artist.where(id: self.id).limit(1)
-    
   end
 
   def song_count
