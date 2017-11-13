@@ -5,7 +5,7 @@ class Song < ActiveRecord::Base
   def get_genre_name
     instance = Genre.select(:name).where(id: 1)
     instance.name
-    binding.pry
+    #binding.pry
   end
 
   def drake_made_this
