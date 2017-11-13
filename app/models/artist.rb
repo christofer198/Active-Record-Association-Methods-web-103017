@@ -19,7 +19,7 @@ class Artist < ActiveRecord::Base
 
   def genre_count
     #return the number of genres associated with the artist
-    binding.pry
+    #binding.pry
     arr = []
     instances = Song.where(artist_id: self.id).select(:genre_id)
     instances.collect{|x| arr << x.genre_id}
