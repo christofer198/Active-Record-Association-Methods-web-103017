@@ -7,12 +7,13 @@ class Artist < ActiveRecord::Base
     #return the genre of the artist's first saved song
     #binding.pry
     instance = Song.where(artist_id: self.id).select(:genre_id)
-    Genre.select(:name).where(id: instance[0].genre_id)
+    Genre.select(:id, :name).where(id: instance[0].genre_id)
 
   end
 
   def song_count
     #return the number of songs associated with the artist
+    binding.pry
   end
 
   def genre_count
