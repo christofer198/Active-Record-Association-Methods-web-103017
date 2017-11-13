@@ -10,8 +10,8 @@ class Genre < ActiveRecord::Base
 
   def artist_count
     # return the number of artists associated with the genre
-    Song.select(:artist_id).where(genre_id: self.id).count
-
+    instance = Song.select(:artist_id).where(genre_id: self.id)
+    instance.count
   end
 
   def all_artist_names
