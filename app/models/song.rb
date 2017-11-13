@@ -13,6 +13,6 @@ class Song < ActiveRecord::Base
     Artist.find_or_create_by(name: "Drake")
     instance = Artist.select(:id).where(name: "Drake")
     @artist_id = instance[0].id
-    binding.pry
+    #binding.pry
   end
 end
