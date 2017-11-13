@@ -23,6 +23,6 @@ class Artist < ActiveRecord::Base
     arr = []
     instances = Song.where(artist_id: self.id).select(:genre_id)
     instances.collect{|x| arr << x.genre_id}
-    arr.count
+    arr.uniq!.count
   end
 end
